@@ -29,7 +29,7 @@
   </head>
   <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg" id="navbar">
+    <nav class="navbar fixed-top navbar-expand-lg" id="navbar">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">MUSEUM</a>
         <button
@@ -56,7 +56,7 @@
 
     <!-- Section 1 -->
     <section class="container-fluid px-0">
-      <div class="row align-items-center content">
+      <div class="row align-items-center content" id="home">
         <div class="col-lg-6">
           <div class="text-white text-center d-none d-lg-block" id="title-head">
             <h1>MUSEUM OF DINO</h1>
@@ -72,11 +72,31 @@
         </div>
       </div>
 
-      <div class="row aling-items-center content">
+      <div class="row aling-items-center content" id="about">
         <div class="col-md-6 order-2 order-md-1">
           <img class="img-fluid" src="image/dino1.jpg" alt="dino1 " />
         </div>
-        <div class="col-md-6 text-center order-1 order-md-2">
+        <div class="col-md-6 text-center order-1 ">
+          <div class="row justify-content-center">
+            <div class="col-10 col-lg-8 blurb pt-3">
+              <h2>Museum of ark</h2>
+              <img src="image/dino-head.avif" alt="" height="60" class="d-none d-lg-inline"/>
+              <p class="lead">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dignissimos accusantium voluptatum sit at! Architecto incidunt
+                accusamus commodi? Repudiandae dolore cupiditate pariatur omnis
+                officia. Debitis dolores repellat itaque est nobis inventore.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row aling-items-center content" id="ticket">
+        <div class="col-md-6 order-2 order-md-1">
+          <img class="img-fluid" src="image/dino2.jfif" alt="dino1 " />
+        </div>
+        <div class="col-md-6 text-center ">
           <div class="row justify-content-center">
             <div class="col-10 col-lg-8 blurb pt-3">
               <h2>Museum of ark</h2>
@@ -105,6 +125,17 @@
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"
     ></script>
+    <!-- end script -->
+
+    <!-- script -->
+    <script>
+      $(function(){
+        $(document).scroll(function() {
+          let $nav = $('#navbar')
+          $nav.toggleClass('scorlled', $(this).scrollTop() > $nav.height())
+        })
+      })
+    </script>
     <!-- end script -->
   </body>
 </html>
